@@ -7,7 +7,7 @@ use DemianShtepa\Payture\Helper;
 use DemianShtepa\Payture\Transport;
 use DemianShtepa\Payture\TransportInterface;
 
-class EWallet
+class EWallet implements EWalletInterface
 {
     /**
      * @var Configuration
@@ -40,13 +40,9 @@ class EWallet
     }
 
     /**
-     * @param string $VWUserLgn
-     * @param string $VWUserPsw
-     * @param array $data
-     *
-     * @return mixed
+     * {@inheritdoc}
      */
-    public function GetList(string $VWUserLgn, string $VWUserPsw, $data = [])
+    public function GetList(string $VWUserLgn, string $VWUserPsw, $data = []): array
     {
         $params = array_merge([
             "VWUserLgn" => $VWUserLgn,
