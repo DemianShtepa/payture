@@ -1,0 +1,20 @@
+{
+    "name": "DemianShtepa/payture",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Demian",
+            "email": "demyan.shtepa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "DemianShtepa/streams": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DemianShtepa\\Payture\\": "src"
+        }
+    }
+}
